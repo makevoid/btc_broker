@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: green; }
+
+body {
+  padding: 0; }
+
+.clear {
+  clear: both; }
+
+nav a {
+  margin-right: 10px; }
+
+.btn, .button, nav a {
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: lightgreen;
+  border: 1px solid lightgreen; }
+  .btn:hover, .button:hover, nav a:hover {
+    border: 1px solid green; }

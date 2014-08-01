@@ -1,1 +1,37 @@
-main.sass
+
+// colors
+
+$color_main:    green
+$color_action:  lightGreen
+
+// reset
+
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: $color_main
+
+body
+  padding: 0
+
+// utils
+
+.clear
+  clear: both
+
+
+// buttons
+
+nav a
+  margin-right: 10px
+
+
+.btn, .button, nav a
+  padding: 5px 8px
+  border-radius: 7px
+  background: $color_action
+  border: 1px solid $color_action
+  &:hover
+    border: 1px solid $color_main
