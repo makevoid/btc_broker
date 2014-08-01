@@ -1,5 +1,5 @@
 require "spec_helper"
 
-describe Deposit do
+describe Order do
 
 end

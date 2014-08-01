@@ -1,8 +1,7 @@
-ENV["app_env"] = "test"
+path = File.expand_path "../../", __FILE__
 
-require_relative "../config/env"
-
-# rspec configurations
+ENV["RACK_ENV"] = "test"
+require "#{path}/config/env"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
@@ -10,4 +9,11 @@ RSpec.configure do |config|
   end
 end
 
-include VendingMachine
+
+def cleanup!
+  DataMapper.auto_migrate!
+end
+
+# prepare test db
+
+cleanup!
