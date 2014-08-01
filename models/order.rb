@@ -25,12 +25,14 @@ class Order
 
     transaction = Bitstamp.user_transactions.all(limit: 1).first
 
-    if transaction.btc == self.amount
+    tx_btc_amount = transaction.btc.to_f * -1
+
+    if tx_btc_amount == amount
       user.balance_usd += (transaction.usd.to_f * 100).to_i
       user.save
     else
       # TODO: implement transaction backcheck (async)
-
+      puts "DEBUG: Last transaction not matched"
     end
   end
 
