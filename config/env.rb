@@ -6,7 +6,7 @@ Bundler.require :default
 MAIN_BTC_ADDRESS = "1EiNgZmQsFN4rJLZJWt93quMEz3X82FJd2"
 # TODO: in a production version, use multiple addresses with HDW (hierarchical deterministic wallets)
 
-SERVER_URL = "d2.mkvd.net:3005" # your server or local machine public ip / address
+SERVER_URL = "d2.mkvd.net:3003" # your server or local machine public ip / address
 
 
 # infer path
