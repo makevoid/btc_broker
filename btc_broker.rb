@@ -14,8 +14,15 @@ class BtcBroker < Sinatra::Base
   end
 
 
+  # login part, todo: implement and move
+  def current_user
+    @current_user ||= User.first
+  end
+
+
   # note: routes are in /routes directory
 
 end
 
 require "#{PATH}/routes/main"
+require "#{PATH}/routes/api"

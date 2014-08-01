@@ -5,4 +5,12 @@ class BtcBroker < Sinatra::Base
 
   end
 
+
+  # listen for BTC deposits
+  # post
+
+  post "/chain/deposit" do
+
+  end
+
 end

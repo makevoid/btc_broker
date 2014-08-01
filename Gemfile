@@ -29,7 +29,7 @@ gem "activemodel", "3.1"
 gem "activesupport", "3.1"
 gem "bitstamp" # note: better use raw api, I don't like requiring activemodel+activesupport in any of my apps
 
-gem "chain-ruby"
+gem "chain-ruby", require: "chain"
 
 
 group :test do

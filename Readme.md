@@ -31,10 +31,42 @@ implementations
 
 ### Installing
 
-ruby 1.9+ is required, i use 2.1 but any will be ok
+ruby 1.9+ is required, I use 2.1 but any will be ok
 
     bundle
 
+### Prepare the db
+
+run
+
+    ruby lib/tasks/setup.rb
+
+### Configuring
+
+you need two conf files with api key and secret separated by the character "|"
+
+Bitstamp: ./bitstamp
+Chain:    ./chain_api
+
+
+example: API_KEY|API_SECRET
+
+
+---
+
+
+you need to edit config/env.rb and change the following constants:
+
+MAIN_BTC_ADDRESS
+
+with a btc address you control (with zero funds is ok)
+
+
+### Running
+
+    rackup
+
+visit http://localhost:9292
 
 ### Specs
 

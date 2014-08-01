@@ -1,6 +1,11 @@
 require 'bundler/setup'
 Bundler.require :default
 
+# configurations:
+
+MAIN_BTC_ADDRESS = "1EiNgZmQsFN4rJLZJWt93quMEz3X82FJd2"
+# TODO: in a production version, use multiple addresses with HDW (hierarchical deterministic wallets)
+
 
 # infer path
 path = File.expand_path "../../", __FILE__
@@ -42,3 +47,10 @@ Bitstamp.setup do |config|
   config.key        = key
   config.secret     = secret
 end
+
+
+
+### BTC part --- action!
+
+chain = Chainable.new
+chain.start

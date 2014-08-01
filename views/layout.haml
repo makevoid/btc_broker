@@ -6,6 +6,10 @@
     %title= title
     %link{ rel: "stylesheet", href: "/css/main.css" }
   %body{ class: body_class }
+    .right
+      Welcome #{current_user.username}!
+      %a.btn{ href: "#" } log out
+
     %h1= title
     %nav
       - nav_link "/",          "Home"
