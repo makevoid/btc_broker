@@ -9,6 +9,8 @@ class Order
 
   alias :placed_at :created_at
 
+  belongs_to :user
+
 
   after :create do
     self.created_at = Time.now

@@ -4,4 +4,9 @@ DataMapper.auto_migrate!
 
 # dev only: create dummy user
 
-User.create username: "Ali"
+user = User.create username: "Ali"
+
+# fake user deposit, starting with 0.1 BTC
+
+dep = user.deposits.create amount: (0.1 * 10**8)
+dep.received!

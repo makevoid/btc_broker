@@ -1,8 +1,13 @@
 %h1 Deposit
 
 
-%p Please deposit #{@deposit.amount} funds to this BTC address
+%p Please deposit #{@deposit.amount_btc} BTC to this BTC address
 
 %input.deposit{ type: "text", disabled: true, value: MAIN_BTC_ADDRESS  }
 
 %p Deposit funds and leave this page open until your funds pop up
+
+
+DEBUG:
+
+= Deposit.all.map{ |d| d.amount }.join(", ")

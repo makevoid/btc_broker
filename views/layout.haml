@@ -7,7 +7,10 @@
     %link{ rel: "stylesheet", href: "/css/main.css" }
   %body{ class: body_class }
     .right
-      Welcome #{current_user.username}!
+      %p Welcome #{current_user.username}!
+      %p Balance:
+      %p BTC: #{current_user.balance_btc_ui}
+      %p USD: #{"%.2f" % current_user.balance_usd_ui}
       %a.btn{ href: "#" } log out
 
     %h1= title

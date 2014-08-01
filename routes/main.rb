@@ -16,7 +16,9 @@ class BtcBroker < Sinatra::Base
 
   post "/deposit" do
     # TODO: params sanitization
-    @deposit = current_user.deposits.create params[:deposit]
+    amount = params[:deposit][:amount].to_f * 10**8
+
+    @deposit = current_user.deposits.create amount: amount
     haml :deposit_listen
   end
 
