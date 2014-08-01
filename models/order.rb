@@ -22,11 +22,17 @@ class Order
     amount = 0.0001
 
     price = Bitstamp::Ticker.low
-    Bitstamp.orders.sell(amount: amount, price: price)
+    #Bitstamp.orders.sell(amount: amount, price: price)
 
     transaction = Bitstamp.user_transactions.all(limit: 1).first
-    transaction.btc_usd
-    raise transaction.btc_usd.inspect
+
+    if transaction.btc == self.amount
+      user.balance_usd += transaction.usd.to_f * 100
+      user.save
+    else
+      # TODO: implement transaction backcheck (async)
+
+    end
   end
 
 end

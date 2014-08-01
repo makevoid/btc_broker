@@ -7,7 +7,6 @@ class Chainable
 
     # one_time
 
-
   end
 
   def one_time
