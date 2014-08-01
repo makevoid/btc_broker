@@ -10,7 +10,7 @@ include Rack::Test::Methods
 
 # enable :sessions
 
-require "#{path}/bitcoin_exchange"
+require "#{path}/btc_broker"
 
 
 # specs helper methods, TODO: review before using them
