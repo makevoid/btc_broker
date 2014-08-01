@@ -2,7 +2,8 @@ class BtcBroker < Sinatra::Base
 
   # places a SELL order on Bitstamp
   post "/orders" do
-    order = current_user.orders.create params[:order]
+    amount = params[:order][:amount].to_f * 10**8
+    order = current_user.orders.create amount: amount
 
     # TODO: notice the user that order is placed successfully and BTC are now converted to usd
     haml :index

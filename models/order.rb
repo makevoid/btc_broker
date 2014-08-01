@@ -4,7 +4,6 @@ class Order
   property    :id,            Serial
 
   property    :amount,        Integer # BTC, in satoshis
-  property    :price,         Integer # "
   property    :created_at,    DateTime
 
   alias :placed_at :created_at
@@ -26,7 +25,7 @@ class Order
     amount = 0.0001
 
     price = Bitstamp::Ticker.low
-    #Bitstamp.orders.sell(amount: amount, price: price)
+    Bitstamp.orders.sell(amount: amount, price: price)
 
     transaction = Bitstamp.user_transactions.all(limit: 1).first
 
