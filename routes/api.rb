@@ -10,7 +10,7 @@ class BtcBroker < Sinatra::Base
   # post
 
   post "/chain/deposit" do
-
+    {}.to_json
   end
 
 end

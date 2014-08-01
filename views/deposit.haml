@@ -1,1 +1,11 @@
 %h1 Deposit
+
+
+%p Tell us the amount of BTC you want to deposit
+
+%p Amount (BTC):
+
+%form{ action: "deposit", method: "post" }
+  %input{ type: "text", name: "deposit[amount]" }
+
+  %input{ type: "submit", value: "Create deposit request" }

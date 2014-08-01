@@ -52,5 +52,7 @@ end
 
 ### BTC part --- action!
 
+require "#{path}/lib/chainable"
+
 chain = Chainable.new
 chain.start

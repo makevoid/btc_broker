@@ -24,3 +24,14 @@ nav a {
   border: 1px solid lightgreen; }
   .btn:hover, .button:hover, nav a:hover {
     border: 1px solid green; }
+
+input {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+input.deposit {
+  padding: 10px 15px;
+  font-size: 1.2em;
+  width: 450px;
+  text-align: center; }
