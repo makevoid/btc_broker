@@ -15,6 +15,14 @@ gem "haml"
 gem "sass"
 
 
+# database
+
+gem "dm-core"
+gem "dm-sqlite-adapter"
+# gem "dm-mysql-adapter" # switch to mysql or postgres for production time
+gem "dm-migrations"
+
+
 # bitcoin related
 
 gem "activemodel", "3.1"

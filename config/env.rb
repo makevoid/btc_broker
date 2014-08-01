@@ -17,3 +17,28 @@ require "#{path}/models/user"
 require "#{path}/models/order"
 
 DataMapper.finalize
+
+
+
+### BTC part config
+
+
+# chain
+
+secrets = File.read( File.expand_path "~/.chain_api" ).strip
+key_id, key_secret = secrets.split "|"
+Chain.api_key_id      = key_id
+Chain.api_key_secret  = key_secret
+
+
+
+# bitstamp
+
+secrets = File.read( File.expand_path "~/.bitstamp" ).strip
+user, key, secret = secrets.split "|"
+
+Bitstamp.setup do |config|
+  config.client_id  = user
+  config.key        = key
+  config.secret     = secret
+end
