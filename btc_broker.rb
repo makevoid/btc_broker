@@ -13,16 +13,9 @@ class BtcBroker < Sinatra::Base
     include ViewHelpers
   end
 
-  get "/" do
-    haml :index
-  end
 
-  get "/deposit" do
-    haml :deposit
-  end
-
-  get "/sell" do
-    haml :sell
-  end
+  # note: routes are in /routes directory
 
 end
+
+require "#{PATH}/routes/main"
