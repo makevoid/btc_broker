@@ -1,0 +1,14 @@
+:ruby
+  @title = "Automatic Bitcoin Broker"
+!!!
+%html
+  %head
+    %title= @title
+    %link{ rel: "stylesheet", href: "/css/main.css" }
+  %body{ class: body_class }
+    %h1= @title
+    %nav
+      - nav_link "/",          "Home"
+      - nav_link "/deposit",   "Deposit"
+      - nav_link "/sell",      "Sell"
+    = tield

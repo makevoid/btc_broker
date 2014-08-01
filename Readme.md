@@ -2,6 +2,8 @@
 
 Automatic btc broker
 
+Ruby Sinatra app
+
 ### The App!
 
 This app is meant for people to have an easy way to sell their BTC at a maximum price (an automatic broker).  All a user has to do is go onto the site, deposit some BTC, and watch their deposit/sale go from “pending” to “complete” with a USD amount that is owed to them.
