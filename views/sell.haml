@@ -1,10 +1,11 @@
 %h1 Sell
 
 %p Amount (BTC):
-%input{ type: "text", name: "order[amount]", placeholder: "like 0.0001" }
+%form{ action: "/orders", method: "post" }
+  %input{ type: "text", name: "order[amount]", placeholder: "like 0.0001" }
 
 
-%input{ type: "submit", value: "Sell" }
+  %input{ type: "submit", value: "Sell" }
 
 
 
@@ -16,4 +17,6 @@
 %br
 %br
 %br
-%p note: 0.0001
+%p
+  note:
+  %input{ disabled: "disabled", value: "0.0001" }

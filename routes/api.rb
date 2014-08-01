@@ -1,9 +1,12 @@
 class BtcBroker < Sinatra::Base
 
-  # places a SELL order
+  # places a SELL order on Bitstamp
   post "/orders" do
+    order = Order.create
 
+    raise order.inspect
   end
+
 
 
   # listen for BTC deposits from Chain api
