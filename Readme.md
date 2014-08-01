@@ -21,3 +21,21 @@ implementations
 - listen for transfers, check for the right amount
 - use hdw
 - ...
+
+
+
+
+#### Final Readme.md
+
+### Installing
+
+ruby 1.9+ is required, i use 2.1 but any will be ok
+
+    bundle
+
+
+### Specs
+
+run specs with:
+
+    rspec
