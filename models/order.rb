@@ -15,14 +15,10 @@ class Order
     self.created_at = Time.now
   end
 
-  after :create do
 
-    bitstamp_place_order
-  end
-
-  def bitstamp_place_order
+  def bitstamp_place_order!
     # amount = self.amount * 10 ** -8 # TODO: use amount in the DB
-    amount = 0.0001
+    amount = 0.009 # TODO: minimum order size for bitstamp is 5$
 
     price = Bitstamp::Ticker.low
     Bitstamp.orders.sell(amount: amount, price: price)
@@ -30,7 +26,7 @@ class Order
     transaction = Bitstamp.user_transactions.all(limit: 1).first
 
     if transaction.btc == self.amount
-      user.balance_usd += transaction.usd.to_f * 100
+      user.balance_usd += (transaction.usd.to_f * 100).to_i
       user.save
     else
       # TODO: implement transaction backcheck (async)
