@@ -14,6 +14,10 @@ class Order
 
   before :create do
     self.created_at = Time.now
+  end
+
+  after :create do
+
     bitstamp_place_order
   end
 
